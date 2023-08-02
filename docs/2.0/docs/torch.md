@@ -24,7 +24,7 @@ torch 库包含了用于多维张量的数据结构，并定义了在这些张�
 | `set_printoptions`        | 设置用于打印的选项                                                                                                                    |
 | `set_flush_denormal`      | 在CPU上禁用非规格浮点数。                                                                                                             |
 
-## 新建操作
+## Creation Ops （新建操作）
 
 * <font color=＃00BFFF>NOTE</font>
   
@@ -64,3 +64,58 @@ torch 库包含了用于多维张量的数据结构，并定义了在这些张�
 | `complex`              | 构造一个实部等于`real`，虚部等于`imag`的复张量。                                                                          |
 | `polar`                | 构造一个复张量，其元素为与极坐标对应的笛卡尔坐标，具有绝对值`abs`和角度`angle`。                                          |
 | `heaviside`            | 为`input`中的每个元素计算Heaviside阶跃函数。                                                                              |
+
+## Indexing, Slicing, Joining and Mutating Ops （索引，切片，组合，变换操作）
+
+|||
+|-|-|
+|adjoint|返回共轭张量的视图，并将最后两个维度进行转置。|
+|argwhere|返回一个张量，其中包含`input`的所有非零元素的索引。|
+|cat|在给定维数中拼接给定序列的`seq`张量。|
+|concat|`torch.cat()` 的别名|
+|concatenate|`torch.cat()` 的别名|
+|conj|返回具有翻转共轭位的`input`视图。|
+|chunk|尝试将张量拆分为指定数量的块。|
+|dsplit|根据`indices_or_sections`将具有三维或更多维度的`input`张量分割为多个张量。|
+|column_stack|通过水平叠加`tensors`来创建一个新的张量。|
+|dstack|按顺序深度堆叠张量(沿着第三个轴)。|
+|gather|沿着由*dim*指定的轴取值。|
+|hsplit|根据`indices_or_sections`将`input`(一个或多个维度的张量)水平分割成多个张量。|
+|hstack|按水平顺序堆叠张量(按列堆叠)。|
+|index_add|函数描述请参见`index_add_()`。|
+|index_copy|函数描述请参见`index_add_()`。|
+|index_reduce|函数描述请参见`index_reduce_()`。|
+|index_select|返回一个新的张量，该张量使用`index`中的项沿维度`dim`对`input`张量进行索引，该索引是一个*LongTensor*。|
+|masked_select|返回一个新的1-D张量，它根据布尔掩码`mask`(*BoolTensor*)对`input`张量进行索引。|
+|movedim|将`source`位置处的`input`维数移动到`destination`位置。|
+|moveaxis|`torch.movedim()`的别名|
+|narrow|返回一个新的张量，它是`input`张量的缩小版本。|
+|narrow_copy|与`Tensor.narrow()`相同，但返回副本而不是共享存储。|
+|permute|返回原始张量`input`的视图，其维度进行了重新排列。|
+|reshape|返回具有与`input`相同数据和元素数量的张量，但具有指定的形状。|
+|row_stack|`torch.vstack()`的别名|
+|select|在给定索引处沿选定维度对`input`张量进行切片。|
+|scatter|`torch.Tensor.scatter_()`的异址(Out-of-place)版本|
+|diagnal_scatter|将`src`张量的值沿着`input`的对角线元素嵌入，取`dim1`和`dim2`两个维度。|
+|select_scatter|将`src`张量的值嵌入到`input`中的给定索引处。|
+|slice_scatter|将`src`张量的值嵌入到`input`中的给定维度。|
+|scatter_add|`torch.scatter_add_()`的异址(Out-of-place)版本|
+|scatter_reduce|`torch.scatter_reduce_()`的异址(Out-of-place)版本|
+|split|将张量分成块。|
+|squeeze|返回一个张量，为`input`删除了所有大小为1的维度。|
+|stack|沿着一个新的维度拼接一个张量序列。|
+|swapaxes|`torch.transpose()`的别名|
+|swapdims|`torch.transpose()`的别名|
+|t|期望`input`为维度不大于2的张量，并将维度0和1转置。|
+|take|返回由`input`指定索引处的元素组成的张量|
+|take_along_dim|沿着给定`dim`，从输入中`indices`的一维索引处选择值。|
+|tensor_split|沿着维度`dim`根据索引或由`indices_or_sections`指定的节数,将一个张量分成多个子张量，所有子张量都是`input`的视图。|
+|tile|通过重复`input`的元素来构造一个张量。|
+|transpose|返回`input`转置后的一个张量|
+|unbind|移除张量的一个维度|
+|unsuqeeze|在张量的特定位置插入一个新的维度，维度大小为1|
+|vsplit|根据`indices_or_sections`将具有两个或多个维度的张量垂直分割为多个张量。|
+|vstack|垂直顺序堆叠张量(逐行)。|
+|where|根据`condition`，返回从`input`或`other`中选择的元素张量。|
+
+## 生成器(Generators)

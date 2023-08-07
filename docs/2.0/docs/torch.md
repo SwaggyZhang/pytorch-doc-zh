@@ -232,15 +232,48 @@ False
 
 |||
 |-|-|
-|`abs`||
-|`absolute`||
-|`acos`||
-|`arccos`||
-|`acosh`||
-|`arccosh`||
-|`add`||
-|`addcdiv`||
-|`addcmul`||
+|`abs`|计算`input`中每个元素的绝对值|
+|`absolute`|`torch.abs()`的别名|
+|`acos`|计算`input`中每个元素的反余弦函数值|
+|`arccos`|`torch.acos()`的别名|
+|`acosh`|计算`input`中每个元素的反双曲余弦函数值|
+|`arccosh`|`torch.acosh()`的别名|
+|`add`|将`other`乘以`alpha`倍，加到`input`上|
+|`addcdiv`|执行`tensor1`除以`tensor2`的逐元素除法，将结果乘以标量`value`并将其加到`input`。|
+|`addcmul`|执行`tensor1`乘`tensor2`的逐元素乘法，将结果乘以标量`value`并将其加到`input`。|
+|angle|计算`input`中的元素的弧度值|
+|asin|返回一个张量，为`input`中各个元素的acrsin值|
+|`arcsin`|`torch.asin()`的别名|
+|asinh|返回一个张量，为`input`中各个元素的反双曲正弦值|
+|arcsinh|`torch.asin()`的别名|
+|atan|返回一个张量，为`input`中各个元素的arctan值|
+|arctan|`torch.atan()`的别名|
+|atanh|返回一个张量，为`input`中各个元素的双曲正切值|
+|arctanh|`torch.atanh()`的别名|
+|atan2|考虑象限的$\frac{input_i}{other_i}$的逐元素反正切。|
+|arctan2|`torch.atan2()`的别名|
+|bitwise_not|计算给定输入张量的按位非|
+|bitwise_and|计算给定输入张量`input`和`other`的按位与|
+|bitwise_or|计算给定输入张量`input`和`other`的按位或|
+|bitwise_xor|计算给定输入张量`input`和`other`的按位异或|
+|bitwise_left_shift|计算`input`的左算术移`other`位。|
+|bitwise_right_shift|计算`input`的右算术移`other`位。|
+|ceil|返回输入张量的上界，即大于等于所有元素的最小整数|
+|clamp|将张量的元素夹在区间[`min`,`max`]中|
+|clip|`torch.clamp()`的别名|
+|conj_physical|计算给定输入张量各元素的共轭复数。|
+|copysign|创建一个新的浮点张量，其大小为`input`，符号为`other`。|
+|cos|计算`input`中各元素的余弦值|
+|cosh|计算`input`中各元素的双曲余弦值|
+|deg2rad|将`input`中的角度值转为弧度|
+|div|返回输入`input`的每个元素除以`other`的对应元素。|
+|divide|`torch.div()`的别名|
+|digamma|`torch.special.digamma()`的别名|
+|erf|`torch.special.erf()`的别名|
+|erfc|`torch.special.erfc()`的别名|
+|exp|返回一个新的张量，其中包含输入张量`input`元素的指数。|
+|exp2|`torch.special.exp2()`的别名|
+|expm1|`torch.special.expm1()`的别名|
 
 ### Reduction Ops
 

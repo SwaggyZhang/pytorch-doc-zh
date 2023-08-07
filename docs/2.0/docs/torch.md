@@ -138,17 +138,17 @@ torch 库包含了用于多维张量的数据结构，并定义了在这些张�
 
 |||
 |-|-|
-|bernoulli|从伯努利分布中采样二进制随机数(0或1)。|
-|multinomial|返回一个张量，从`input`的相应行中的多项概率分布中采样，其中每行包含`num_samples`索引。|
-|normal|返回一个随机数字的张量，这些随机数是从单独的正态分布中抽取的，这些正态分布的平均值和标准差都是给定的。|
-|poisson|返回一个与`input`相同大小的张量，其中每个元素从泊松分布中采样，其速率参数由输入中的相应元素给出。|
-|rand|返回一个由区间$[0,1)$上均匀分布的随机数填充的张量。|
-|rand_like|返回一个由区间$[0,1)$上均匀分布的随机数填充的张量，大小与`input`相同。|
-|randint|返回一个张量，由$[low,high)$区间均匀生成的随机整数填充。|
-|randint_like|返回一个张量，由$[low,high)$区间均匀生成的随机整数填充，大小与`input`相同。|
-|randn|返回一个张量，以均值为0，方差为1的正态分布(也称为标准正态分布)的随机数填充。|
-|randn_like|返回一个张量，以均值为0，方差为1的正态分布(也称为标准正态分布)的随机数填充，大小与`input`相同。|
-|randperm|返回从$0$到$n - 1$的整数的随机排列。|
+|`bernoulli`|从伯努利分布中采样二进制随机数(0或1)。|
+|`multinomial`|返回一个张量，从`input`的相应行中的多项概率分布中采样，其中每行包含`num_samples`索引。|
+|`normal`|返回一个随机数字的张量，这些随机数是从单独的正态分布中抽取的，这些正态分布的平均值和标准差都是给定的。|
+|`poisson`|返回一个与`input`相同大小的张量，其中每个元素从泊松分布中采样，其速率参数由输入中的相应元素给出。|
+|`rand`|返回一个由区间$[0,1)$上均匀分布的随机数填充的张量。|
+|`rand_like`|返回一个由区间$[0,1)$上均匀分布的随机数填充的张量，大小与`input`相同。|
+|`randint`|返回一个张量，由$[low,high)$区间均匀生成的随机整数填充。|
+|`randint_like`|返回一个张量，由$[low,high)$区间均匀生成的随机整数填充，大小与`input`相同。|
+|`randn`|返回一个张量，以均值为0，方差为1的正态分布(也称为标准正态分布)的随机数填充。|
+|`randn_like`|返回一个张量，以均值为0，方差为1的正态分布(也称为标准正态分布)的随机数填充，大小与`input`相同。|
+|`randperm`|返回从$0$到$n - 1$的整数的随机排列。|
 
 ### In-place random sampling （原址随机抽样）
 
@@ -241,39 +241,39 @@ False
 |`add`|将`other`乘以`alpha`倍，加到`input`上|
 |`addcdiv`|执行`tensor1`除以`tensor2`的逐元素除法，将结果乘以标量`value`并将其加到`input`。|
 |`addcmul`|执行`tensor1`乘`tensor2`的逐元素乘法，将结果乘以标量`value`并将其加到`input`。|
-|angle|计算`input`中的元素的弧度值|
-|asin|返回一个张量，为`input`中各个元素的acrsin值|
+|`angle`|计算`input`中的元素的弧度值|
+|`asin`|返回一个张量，为`input`中各个元素的acrsin值|
 |`arcsin`|`torch.asin()`的别名|
-|asinh|返回一个张量，为`input`中各个元素的反双曲正弦值|
-|arcsinh|`torch.asin()`的别名|
-|atan|返回一个张量，为`input`中各个元素的arctan值|
-|arctan|`torch.atan()`的别名|
-|atanh|返回一个张量，为`input`中各个元素的双曲正切值|
-|arctanh|`torch.atanh()`的别名|
-|atan2|考虑象限的$\frac{input_i}{other_i}$的逐元素反正切。|
-|arctan2|`torch.atan2()`的别名|
-|bitwise_not|计算给定输入张量的按位非|
-|bitwise_and|计算给定输入张量`input`和`other`的按位与|
-|bitwise_or|计算给定输入张量`input`和`other`的按位或|
-|bitwise_xor|计算给定输入张量`input`和`other`的按位异或|
-|bitwise_left_shift|计算`input`的左算术移`other`位。|
-|bitwise_right_shift|计算`input`的右算术移`other`位。|
-|ceil|返回输入张量的上界，即大于等于所有元素的最小整数|
-|clamp|将张量的元素夹在区间[`min`,`max`]中|
-|clip|`torch.clamp()`的别名|
-|conj_physical|计算给定输入张量各元素的共轭复数。|
-|copysign|创建一个新的浮点张量，其大小为`input`，符号为`other`。|
-|cos|计算`input`中各元素的余弦值|
-|cosh|计算`input`中各元素的双曲余弦值|
-|deg2rad|将`input`中的角度值转为弧度|
-|div|返回输入`input`的每个元素除以`other`的对应元素。|
-|divide|`torch.div()`的别名|
-|digamma|`torch.special.digamma()`的别名|
-|erf|`torch.special.erf()`的别名|
-|erfc|`torch.special.erfc()`的别名|
-|exp|返回一个新的张量，其中包含输入张量`input`元素的指数。|
-|exp2|`torch.special.exp2()`的别名|
-|expm1|`torch.special.expm1()`的别名|
+|`asinh`|返回一个张量，为`input`中各个元素的反双曲正弦值|
+|`arcsinh`|`torch.asin()`的别名|
+|`atan`|返回一个张量，为`input`中各个元素的arctan值|
+|`arctan`|`torch.atan()`的别名|
+|`atanh`|返回一个张量，为`input`中各个元素的双曲正切值|
+|`arctanh`|`torch.atanh()`的别名|
+|`atan2`|考虑象限的$\frac{input_i}{other_i}$的逐元素反正切。|
+|`arctan2`|`torch.atan2()`的别名|
+|`bitwise_not`|计算给定输入张量的按位非|
+|`bitwise_and`|计算给定输入张量`input`和`other`的按位与|
+|`bitwise_or`|计算给定输入张量`input`和`other`的按位或|
+|`bitwise_xor`|计算给定输入张量`input`和`other`的按位异或|
+|`bitwise_left_shift`|计算`input`的左算术移`other`位。|
+|`bitwise_right_shift`|计算`input`的右算术移`other`位。|
+|`ceil`|返回输入张量的上界，即大于等于所有元素的最小整数|
+|`clamp`|将张量的元素夹在区间[`min`,`max`]中|
+|`clip`|`torch.clamp()`的别名|
+|`conj_physical`|计算给定输入张量各元素的共轭复数。|
+|`copysign`|创建一个新的浮点张量，其大小为`input`，符号为`other`。|
+|`cos`|计算`input`中各元素的余弦值|
+|`cosh`|计算`input`中各元素的双曲余弦值|
+|`deg2rad`|将`input`中的角度值转为弧度|
+|`div`|返回输入`input`的每个元素除以`other`的对应元素。|
+|`divide`|`torch.div()`的别名|
+|`digamma`|`torch.special.digamma()`的别名|
+|`erf`|`torch.special.erf()`的别名|
+|`erfc`|`torch.special.erfc()`的别名|
+|`exp`|返回一个新的张量，其中包含输入张量`input`元素的指数。|
+|`exp2`|`torch.special.exp2()`的别名|
+|`expm1`|`torch.special.expm1()`的别名|
 
 ### Reduction Ops
 

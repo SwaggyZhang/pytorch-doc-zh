@@ -275,7 +275,39 @@ False
 |`exp2`|`torch.special.exp2()`的别名|
 |`expm1`|`torch.special.expm1()`的别名|
 
-### Reduction Ops
+### Reduction Ops (归纳操作)
+
+|||
+|-|-|
+|`argmax`|返回`input`张量中所有最大元素的索引|
+|`argmin`|返回展开的`input`张量，或沿一个维度中所有最小元素的索引|
+|`amax`|返回沿给定维度将`input`切片后，每个切片的最大值|
+|`amin`|返回沿给定维度将`input`切片后，每个切片的最大值|
+|`aminmax`|计算`input`张量中最小值和最大值|
+|`all`|测试`input`中是否所有元素求值为True。|
+|`any`|测试`input`中是否存在元素求值为True。|
+|`max`|返回`input`张量中所有元素的最大值。|
+|`min`|返回`input`张量中所有元素的最小值。|
+|`dist`|返回(`input` - `other`)的p-范数|
+|`logsumexp`|返回`input`张量给定维度dim中的每一行求和指数的对数。|
+|`mean`|返回`input`张量中所有元素的平均值。|
+|`nanmean`|返回`input`张量中所有非Nan元素的最大值。|
+|`median`|返回`input`张量中元素的中位数。|
+|`nanmedian`|返回`input`张量中非Nan元素的中位数。|
+|`mode`|返回一个namedtuple`(values, indexes)`，其中`values`是给定维度`dim`中输入张量的每一行的模值，即在该行中出现最频繁的值，而`indexes`是找到的每个模式值的索引位置。|
+|`norm`|返回给定张量的矩阵范数或向量范数。|
+|`nansum`|返回所有元素的和，将非数字(Nan)视为零。|
+|`prod`|返回`input`张量中所有元素的乘积。|
+|`quantile`|沿维度`dim`计算`input`张量的每一行的第q个分位数。|
+|`nanquantile`|这是`torch.quantile()`的一个变体，它“忽略”NaN值，计算分位数q，就好像输入中的NaN值不存在一样。|
+|`std`|计算由`dim`指定的维度上的标准差。|
+|`std_mean`|计算由`dim`指定的维度上的标准差和平均数。|
+|`sum`|返回`input`张量中所有元素的和。|
+|`unique`|返回输入张量的唯一元素。|
+|`unique_consecutive`|从每个连续的等效元素组中除去第一个元素以外的所有元素。|
+|`var`|计算由`dim`指定的维度上的方差。|
+|`var_mean`|计算由`dim`指定的维度上的方差和平均数。|
+|`count_nonzero`|沿指定维度为`input`张量的非零元素计数。|
 
 ### Comparison Ops
 

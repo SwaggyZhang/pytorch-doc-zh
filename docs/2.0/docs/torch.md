@@ -309,7 +309,40 @@ False
 |`var_mean`|计算由`dim`指定的维度上的方差和平均数。|
 |`count_nonzero`|沿指定维度为`input`张量的非零元素计数。|
 
-### Comparison Ops
+### Comparison Ops (比较操作)
+
+|||
+|-|-|
+|allclose|检验input和others是否满足条件|
+|argsort|返回沿给定维度按值升序对张量排序的索引。|
+|eq|计算元素相等性|
+|equal|如果两个张量尺寸和元素都相同为True，否则为False|
+|ge|按元素计算input>=other|
+|greater_equal|torch.ge()的别名|
+|gt|按元素计算input>other|
+|greater|torch.gt()的别名|
+|isclose|返回一个新的张量，其中包含布尔元素，表示input的每个元素是否与other的对应元素“接近”|
+|isfinite|返回一个新的张量，其中包含布尔元素，表示每个元素是否有限。|
+|isin|测试是否elements的所有元素都在test_elements中|
+|isinf|测试input的每个元素是否为无穷大(正无穷大或负无穷大)|
+|isposinf|测试input的每个元素是否为正无穷大|
+|isneginf|测试input的每个元素是否为负无穷大|
+|isnan|返回一个带有布尔元素的新张量，表示input的每个元素是否为NaN。|
+|isreal|返回一个带有布尔元素的新张量，表示input的每个元素是否为实数。|
+|kthvalue|返回一个命名元组(values, indexes)，其中values是给定维度dim中input张量每行的第k个最小元素。|
+|le|按元素计算input<=other|
+|less_equal|torch.le()的别名|
+|lt|按元素计算input< other|
+|less|torch.lt()的别名|
+|maximum|计算input和other元素的最大值。|
+|minimum|计算input和other元素的最小值。|
+|fmax|与torch.maximum()相同，但处理Nan的方式不同|
+|fmin|与torch.manimum()相同，但处理Nan的方式不同|
+|ne|按元素计算input！=other|
+|not_euqal|torch.ne()的别名|
+|sort|将input张量的元素沿给定维度按值升序排序。|
+|topk|返回给定input张量沿给定维度的k个最大元素。|
+|msort|将input张量的元素沿其第一维按值升序排序。|
 
 ### Spectral Ops
 

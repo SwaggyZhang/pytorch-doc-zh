@@ -192,6 +192,7 @@ TODO：添加超链接
 上下文管理器`torch.no_grad()`、`torch.enable_grad()`和`torch.set_grad_enabled()`有助于在局部禁用和启用梯度计算。有关其用法的更多详细信息，请参阅 Locally disabling gradient computation。这些上下文管理器是线程本地的，所以如果你使用`threading`模块将工作发送给另一个线程，它们将不起作用。
 
 示例：
+
 ```py
 >>> x = torch.zeros(1, requires_grad=True)
 >>> with torch.no_grad():
@@ -313,36 +314,36 @@ False
 
 |||
 |-|-|
-|allclose|检验input和others是否满足条件|
-|argsort|返回沿给定维度按值升序对张量排序的索引。|
-|eq|计算元素相等性|
-|equal|如果两个张量尺寸和元素都相同为True，否则为False|
-|ge|按元素计算input>=other|
-|greater_equal|torch.ge()的别名|
-|gt|按元素计算input>other|
-|greater|torch.gt()的别名|
-|isclose|返回一个新的张量，其中包含布尔元素，表示input的每个元素是否与other的对应元素“接近”|
-|isfinite|返回一个新的张量，其中包含布尔元素，表示每个元素是否有限。|
-|isin|测试是否elements的所有元素都在test_elements中|
-|isinf|测试input的每个元素是否为无穷大(正无穷大或负无穷大)|
-|isposinf|测试input的每个元素是否为正无穷大|
-|isneginf|测试input的每个元素是否为负无穷大|
-|isnan|返回一个带有布尔元素的新张量，表示input的每个元素是否为NaN。|
-|isreal|返回一个带有布尔元素的新张量，表示input的每个元素是否为实数。|
-|kthvalue|返回一个命名元组(values, indexes)，其中values是给定维度dim中input张量每行的第k个最小元素。|
-|le|按元素计算input<=other|
-|less_equal|torch.le()的别名|
-|lt|按元素计算input< other|
-|less|torch.lt()的别名|
-|maximum|计算input和other元素的最大值。|
-|minimum|计算input和other元素的最小值。|
-|fmax|与torch.maximum()相同，但处理Nan的方式不同|
-|fmin|与torch.manimum()相同，但处理Nan的方式不同|
-|ne|按元素计算input！=other|
-|not_euqal|torch.ne()的别名|
-|sort|将input张量的元素沿给定维度按值升序排序。|
-|topk|返回给定input张量沿给定维度的k个最大元素。|
-|msort|将input张量的元素沿其第一维按值升序排序。|
+|`allclose`|检验 `input` 和 `others` 是否满足条件|
+|`argsort`|返回沿给定维度按值升序对张量排序的索引。|
+|`eq`|计算元素相等性|
+|`equal`|如果两个张量尺寸和元素都相同为`True`，否则为`False`|
+|`ge`|按元素计算`input`$\geq$ `other`|
+|`greater_equal`|`torch.ge()`的别名|
+|`gt`|按元素计算`input`$>$ `other`|
+|`greater`|`torch.gt()`的别名|
+|`isclose`|返回一个新的张量，其中包含布尔元素，表示`input`的每个元素是否与`other`的对应元素“接近”|
+|`isfinite`|返回一个新的张量，其中包含布尔元素，表示每个元素是否有限。|
+|`isin`|测试是否`elements`的所有元素都在`test_elements`中|
+|`isinf`|测试`input`的每个元素是否为无穷大(正无穷大或负无穷大)|
+|`isposinf`|测试`input`的每个元素是否为正无穷大|
+|`isneginf`|测试`input`的每个元素是否为负无穷大|
+|`isnan`|返回一个带有布尔元素的新张量，表示`input`的每个元素是否为`NaN`。|
+|`isreal`|返回一个带有布尔元素的新张量，表示`input`的每个元素是否为实数。|
+|`kthvalue`|返回一个命名元组`(values, indexes)`，其中`values`是给定维度`dim`中`input`张量每行的第`k`个最小元素。|
+|`le`|按元素计算`input`$\leq$`other`|
+|`less_equal`|`torch.le()`的别名|
+|`lt`|按元素计算`input`$<$ `other`|
+|`less`|`torch.lt()`的别名|
+|`maximum`|计算`input`和`other`元素的最大值。|
+|`minimum`|计算`input`和`other`元素的最小值。|
+|`fmax`|与`torch.maximum()`相同，但处理`Nan`的方式不同|
+|`fmin`|与`torch.minimum()`相同，但处理`Nan`的方式不同|
+|`ne`|按元素计算`input`$\neq$`other`|
+|`not_euqal`|`torch.ne()`的别名|
+|`sort`|将`input`张量的元素沿给定维度按值升序排序。|
+|`topk`|返回给定`input`张量沿给定维度的k个最大元素。|
+|`msort`|将`input`张量的元素沿其第一维按值升序排序。|
 
 ### Spectral Ops
 
